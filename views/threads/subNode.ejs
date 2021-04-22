@@ -1,0 +1,25 @@
+<% layout('boilerplate/boiler') -%>
+
+<div class="container">
+    <div class="subNode">
+        <p class="thread-nav"><a href="/">Home</a> > <a href="/parentnode/<%- node.parentNode%>"><%= parentNode%></a></p>
+        <h1 class="title"><%= node.title%></h1>
+        <a class="btn-create" href="/thread/create/<%- node.id %>">Create Thread</a>
+        <div class="allThread">
+            <%let threads = node.threads.reverse()%>
+            <%for (let i = startPoint; i < endPoint; i++) {%>
+                <div class="thread">
+                    <a href="/thread/<%- threads[i].id%>/1"><%- threads[i].title %> %></a>
+                    <p><a href="/user/<%- threads[i].author.id%>"><%- threads[i].author.username%></a>, <%- threads[i].created.toDateString()%></p>
+                    <hr>
+                </div>
+            <%};%>
+        </div>
+        <%if(pageNumb > 1){%>
+            <a class="pageChange" href="/subnode/<%-node.id%>/<%-pageNumb - 1%>">Prev</a>
+        <%}%>
+        <%if(highestPageNumb > pageNumb){%>
+            <a class="pageChange" href="/subnode/<%-node.id%>/<%- nextPage%>">Next</a>
+        <%}%>
+    </div>
+</div>

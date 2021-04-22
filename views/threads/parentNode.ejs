@@ -1,0 +1,14 @@
+<% layout('boilerplate/boiler') -%>
+
+<div class="container">
+    <div class="node">
+        <p class="thread-nav"><a href="/">Home</a></p>
+        <h1 class="title"><%= node.title%></h1>
+        <%node.subNodes.forEach(function(s){%>
+            <div class="subNode">
+                <a href="/subnode/<%-s.id%>/1"><%= s.title%></a>
+                <hr>
+            </div>
+        <%});%>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<% layout('boilerplate/boiler') -%>
+<div class="container">
+    <div class="fieldContainer">
+        <p class="thread-nav"><a href="/">Home</a> > <a href="/parentnode/<%- pNode.id%>"><%= pNode.title%></a> > <a href="/subnode/<%- subNode.id%>"><%- subNode.title%></a></p>
+        <h1 class="title">Create Thread</h1>
+        <% if(error !== null){ %>
+            <p class="input-error"><%- error %></p>
+        <%}else{%>
+        <%}%>
+        <form action="/thread/create/<%-subNode.id%>"  method="POST">
+            <input type="text" name="title" class="input-title" placeholder="Thread title">
+            <textarea name="content" class="input-box" placeholder="Write your content here..."></textarea>
+            <button type="submit" class="btn-create">Create Thread</button>
+        </form>
+    </div>
+</div>

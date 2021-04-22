@@ -1,0 +1,14 @@
+<% layout('boilerplate/boiler') -%>
+<div class="container">
+    <div class="fieldContainer">
+        <h1 class="title">Create Sub Node</h1>
+        <% if(error !== null){ %>
+            <p class=" input-error"><%- error %></p>
+        <%}else{%>
+        <%}%>
+        <form action="/subnode/create/<%-parentNode%>"  method="POST">
+            <input type="text" name="title" class="input-title" placeholder="Sub node title">
+            <button type="submit" class="btn-create">Create Sub Node</button>
+        </form>
+    </div>
+</div>

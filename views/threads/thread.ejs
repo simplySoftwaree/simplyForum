@@ -1,0 +1,36 @@
+<% layout('boilerplate/boiler') -%>
+
+<div class="container">
+    <div class="thread">
+        <%if(error !== null){%>
+            <p class="input-error"><%= error%></p>
+        <%}%>
+        <div class="thread-start">
+            <p class="thread-nav"><a href="/">Home</a> > <a href="/parentnode/<%- parentNode.id%>"><%= parentNode.title%></a> > <a href="/subnode/<%- subNode.id%>"><%- subNode.title%></a></p>
+            <h1 class="title"><%= thread.title%></h1>
+            <%let content = thread.content.replace("\n", "<br>");%>
+            <p class="content"><%= content%></p>
+        </div>
+        <div class="split">
+            <div class="author"><p>By: <a href="/user/<%- thread.author.id%>"><%= thread.author.username%></a>, on <%= thread.created.toDateString()%></p> <span><a href="/watch/<%- thread.id%>">Watch Thread</a>, <a href="/report/thread/<%- thread.id%>">Report</a></span> </div>
+        </div>
+        <%for (let i = startPoint; i < endPoint; i++) {%>
+            <hr>
+            <div class="thread-comment">
+                <%let comment = thread.threadComments[i].content.replace(/(?:\r\n|\r|\n)/g, '<br>');%>
+                <p id="<%- thread.threadComments[i].id%>" class="content"><%- comment%></p>
+                <p class="author">By: <a href="/user/<%- thread.threadComments[i].author.id%>"><%= thread.threadComments[i].author.username%></a>, on <%= thread.threadComments[i].created.toDateString()%></p>
+            </div>
+        <%};%>
+        <form action="/comment/<%- thread.id%>" method="POST">
+            <textarea name="content" class="input-box" placeholder="Write your reply"></textarea>
+            <button type="submit" class="btn-comment">Comment</button>
+        </form>
+        <%if(pageNumb > 1){%>
+            <a class="pageChange" href="/thread/<%-thread.id%>/<%-pageNumb - 1%>">Prev</a>
+        <%}%>
+        <%if(highestPageNumb > pageNumb){%>
+            <a class="pageChange" href="/thread/<%-thread.id%>/<%- nextPage%>">Next</a>
+        <%}%>
+    </div>
+</div>
