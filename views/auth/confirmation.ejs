@@ -1,0 +1,14 @@
+<% layout('boilerplate/boiler') -%>
+<div class="fieldContainer">
+    <h1>Confirmation Code</h1>
+    <% if(error !== null){ %>
+        <p class=" input-error"><%- error %></p>
+    <%}else{%>
+    <%}%>
+    <form action="/confirmation?_method=PUT" method="POST">
+        <input type="text" name="code" class="input-box" placeholder="Confirmation Code">
+        <button type="submit" class="btn">Confirm Email</button>
+        <hr>
+    </form>
+    <p class="redirectAuth">Didn't get the code?</p><form action="/confirmation/newcode?_method=PUT" method="POST"><button type="submit" class="btn-redirectAuth">Get a new one</button></form>
+</div>

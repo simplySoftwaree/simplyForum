@@ -1,0 +1,89 @@
+
+
+.fieldContainer{
+    width: 300px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 15vh auto 0;
+    text-align: center;
+}
+
+.fieldContainer h1{
+    color:rgb(12, 69, 116);
+    margin-bottom: 15px;
+}
+
+.input-error{
+    padding: 10px;
+    background-color: rgba(241, 239, 105, 0.658);
+}
+
+.input-box{
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid rgb(12, 69, 116);
+    padding: 18px 3px 5px ;
+    margin: 8px 0;
+    outline: none;
+}
+
+.input-box::placeholder{
+    font-size: 1.8vh !important;
+    color: rgb(71, 73, 73);
+}
+
+.btn{
+    width: 95%;
+    border: none;
+    background-color: rgba(12, 69, 116, 0.5);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 2vh;
+    color: rgb(12, 11, 11);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.btn:hover{
+	font-size: 2.2vh;
+    background-color: rgba(12, 69, 116, 0.658);
+}
+
+.redirectAuth{
+    font-size: 2vh;
+    margin-top: 5px;
+}
+
+.btn-redirectAuth{
+    text-decoration: none;
+    display: inline-block;
+    color:rgb(7, 44, 75);
+    font-size: 2vh;
+    border: none;
+    padding: none;
+}
+
+.btn-redirectAuth:active{
+    border: none;
+}
+
+.btn-redirectAuth:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px rgb(10, 57, 95);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:100% 50%;
+    text-decoration: none;
+}
+
+.btn-redirectAuth:hover{
+    text-decoration: none;
+}
+
+.btn-redirectAuth:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+}

@@ -1,0 +1,17 @@
+<% layout('boilerplate/boiler') -%>
+    <div class="fieldContainer">
+        <h1>Login</h1>
+        <% if(error !== null){ %>
+            <p class=" input-error"><%- error %></p>
+        <%}else{%>
+        <%}%>
+        <form action="/<%= type%>" method="POST">
+            <input type="username" name="username" class="input-box" placeholder="Username">
+            <input type="password" name="password" class="input-box" placeholder="Password">
+            <p></p>
+            <button type="submit" class="btn">Login</button>
+            <hr>
+            <p class="redirectAuth">Not have an account? <a class="btn-redirectAuth" href="/user/signup">Sign Up</a></p>
+        </form>
+    </div>
+</div>

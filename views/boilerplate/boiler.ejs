@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include head %>
+    </head>
+    <body>
+        <%if(pageType == 'Main'){%>
+            <% include navbar %>
+            <%- body -%>
+            <% include footer %>
+            <% include copyright %>
+        <%}else if(pageType == 'Admin'){%>
+            <% include navbarAdmin %>
+            <%- body -%>
+            <% include footerAdmin %>
+            <% include copyright %>
+        <%}else{%>
+            <%- body -%>
+        <%}%>
+    </body>
+</html>
