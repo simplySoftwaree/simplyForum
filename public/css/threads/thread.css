@@ -1,0 +1,113 @@
+.thread{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: 1px solid rgb(48, 47, 47);
+    background-color: rgb(48, 47, 47);
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+}
+
+.input-error{
+    margin-top: 2vh;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(241, 239, 105, 0.658);
+}
+
+.thread-nav{
+    margin-top: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.thread-nav a{
+    text-decoration: none;
+    color: rgb(194, 206, 214);
+}
+
+.thread-nav a:hover{
+    border-bottom: 1px solid rgba(205, 212, 216, 0.685);
+}
+
+.title{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.content{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.split{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.author{
+    color: rgb(177, 186, 190);
+    padding: 10px 5px;
+    background-color: rgba(117, 121, 122, 0.301);
+    border: 1px solid rgba(117, 121, 122, 0.603);
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+.author a{
+    color:rgb(96, 140, 170);
+    font-size: 1.9vh;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.author a:hover{
+    border-bottom: 1px solid rgba(205, 212, 216, 0.685);
+}
+
+hr{
+    padding-left: 0vw !important;
+    padding-right: 0vw !important;
+    border: 1px solid rgba(102, 137, 146, 0.603);
+}
+
+.input-box{
+    width: 100%;
+    font-size:1.8vh;
+    color: rgba(200, 218, 219, 0.692);
+    height: 15vh;
+    background-color: rgba(92, 89, 89, 0.658);
+    padding-left: 10px;
+    padding-top: 5px;
+    outline: none;
+}
+
+.btn-comment{
+    background-color: rgba(80, 78, 78, 0.514);
+    text-decoration: none;
+    color: rgb(194, 206, 214);
+    outline: none;
+    display:block;
+    margin-left:auto;
+    padding: 10px;
+    margin-top: 2vh;
+    border : 1px solid rgba(80, 78, 78, 0.514);
+}
+
+.btn-comment:hover{
+    background-color: rgba(119, 116, 116, 0.493);
+}
+
+.pageChange{
+    color: rgb(194, 206, 214);
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border : 1px solid rgba(80, 78, 78, 0.514);
+}
+
+.pageChange:hover{
+    background-color: rgba(119, 116, 116, 0.493);
+}

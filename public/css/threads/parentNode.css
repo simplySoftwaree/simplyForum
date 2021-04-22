@@ -1,0 +1,45 @@
+.node{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: 1px solid rgb(48, 47, 47);
+    background-color: rgb(48, 47, 47);
+}
+.thread-nav{
+    margin-top: 2vh;
+}
+
+.thread-nav a{
+    text-decoration: none;
+    color: rgb(194, 206, 214);
+}
+
+.thread-nav a:hover{
+    border-bottom: 1px solid rgba(205, 212, 216, 0.685);
+}
+
+.title{
+    margin-top: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.subNode{
+    padding: 1.6vh;
+}
+
+.subNode a{
+    color:rgb(96, 140, 170);
+    font-size: 1.9vh;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1.2vh;
+    margin-left: 2vw;
+}
+
+.subNode hr{
+    border: 1px solid rgba(90, 130, 155, 0.384);
+}
+
+
+.subNode a:hover{
+    border-bottom: 1px solid rgba(205, 212, 216, 0.685);
+}

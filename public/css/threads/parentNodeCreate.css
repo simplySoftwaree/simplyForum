@@ -1,0 +1,50 @@
+.fieldContainer{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: 1px solid rgb(48, 47, 47);
+    background-color: rgb(48, 47, 47);
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+}
+
+.input-error{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(241, 239, 105, 0.658);
+}
+
+.title{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.input-title{
+    width: 100%;
+    font-size: 1.8vh;
+    color: rgba(200, 218, 219, 0.692);
+    height: 5vh;
+    border: 1px solid rgba(200, 218, 219, 0.473);;
+    background-color: rgba(92, 89, 89, 0.658);
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 2vh;
+    outline: none;
+}
+
+.btn-create{
+    background-color: rgba(80, 78, 78, 0.514);
+    text-decoration: none;
+    color: rgb(194, 206, 214);
+    outline: none;
+    display:block;
+    padding: 10px;
+    margin-top: 2vh;
+    border : 1px solid rgba(80, 78, 78, 0.514);
+}
+
+.btn-create:hover{
+    background-color: rgba(119, 116, 116, 0.493);
+}
