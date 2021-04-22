@@ -37,7 +37,7 @@ app.use(methodOverride('_method'));
 
 //SESSION
 const sessionConfig = {
-    secret: 'SECRET_KEY',
+    secret: config.secret,
     resave: false,
     saveUninitialized: true
 }
@@ -85,5 +85,5 @@ const userNotifications = require('./routes/user/notifications');
 
 app.use(userNotifications);
 
-app.listen(config.post);
+app.listen(config.port);
 
