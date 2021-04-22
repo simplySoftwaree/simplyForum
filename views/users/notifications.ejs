@@ -1,0 +1,23 @@
+<% layout('boilerplate/boiler') -%>
+
+<div class="container">
+    <div class="notify">
+        <div class="notify-start">
+            <p class="notify-nav"><a href="/">Home</a></p>
+            <h1 class="title">Notifications</h1>
+        </div>
+        <% let allNotify = notifications.reverse()%>
+        <%for (let i = startPoint; i < endPoint; i++) {%>
+            <div class="notify-indv">
+                <p><a href="/user/<%-allNotify[i].author.id%>"><%-allNotify[i].author.username%></a> replied to the thread <a href="/thread/<%-allNotify[i].title.id%>/<%-allNotify[i].title.pageNb%>#<%-allNotify[i].title.comment%>"><%-allNotify[i].title.content%></a></p>
+                <hr>
+            </div>
+        <%};%>
+        <%if(pageNumb > 1){%>
+            <a class="pageChange" href="/notifications/<%-pageNumb - 1%>">Prev</a>
+        <%}%>
+        <%if(highestPageNumb > pageNumb){%>
+            <a class="pageChange" href="/notifications/<%- nextPage%>">Next</a>
+        <%}%>
+    </div>
+</div>
