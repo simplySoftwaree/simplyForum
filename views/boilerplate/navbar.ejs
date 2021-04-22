@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <%if(isLogged == true){%>
+        <a href="/logout">Logout</a>
+        <%if(user.newNotifications == "0"){%>
+            <a href="/notifications">Notifications</a>
+        <%}else{%>
+            <a href="/notifications">Notifications <span><%- user.newNotifications%></span></a>
+        <%}%>
+        <a href="/messages">Messages</a>
+        <a href="/profile">User Profile</a>
+    <%}else{%>
+        <a href="/user/signup">Signup</a>
+        <a href="/login">Login</a>
+    <%}%>
+</nav>
