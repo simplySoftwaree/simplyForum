@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(36, 35, 35);
+    font-family: Cambria;
+}
+
+.container {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2.5%;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+  }
