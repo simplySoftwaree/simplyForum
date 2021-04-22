@@ -1,0 +1,84 @@
+.privateMessages{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: 1px solid rgb(48, 47, 47);
+    background-color: rgb(48, 47, 47);
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+.thread-nav{
+    margin-top: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.thread-nav a{
+    text-decoration: none;
+    color: rgb(194, 206, 214);
+}
+
+.thread-nav a:hover{
+    border-bottom: 1px solid rgba(205, 212, 216, 0.685);
+}
+
+.title{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: rgb(194, 206, 214);
+}
+
+.btn-create{
+    color: rgb(194, 206, 214);
+    text-decoration: none;
+    padding: 10px;
+    border : 1px solid rgba(80, 78, 78, 0.514);
+}
+
+.btn-create:hover{
+    background-color: rgba(119, 116, 116, 0.493);
+}
+
+.allMessages{
+    border: 1px solid rgba(80, 78, 78, 0.514);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.indMsg{
+    padding: 1.6vh;
+}
+
+.indMsg a{
+    color:rgb(96, 140, 170);
+    font-size: 1.9vh;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1.2vh;
+}
+
+.indMsg p{
+    color: rgb(177, 186, 190);
+}
+
+.indMsg hr{
+    border: 1px solid rgba(90, 130, 155, 0.384);
+}
+
+
+.indMsg a:hover{
+    border-bottom: 1px solid rgba(205, 212, 216, 0.685);
+}
+
+.pageChange{
+    color: rgb(194, 206, 214);
+    text-decoration: none;
+    align-self: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border : 1px solid rgba(80, 78, 78, 0.514);
+}
+
+.pageChange:hover{
+    background-color: rgba(119, 116, 116, 0.493);
+}
