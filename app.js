@@ -12,7 +12,7 @@ const config         = require('./config');
 const User           = require('./models/userSchema');
 const app            = express();
 
-mongoose.connect('mongodb+srv://simplyForum:simplyForum1234@cluster0.jt7qc.mongodb.net/database?retryWrites=true&w=majority', { 
+mongoose.connect(config.database , { 
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     useCreateIndex: true,
@@ -85,5 +85,5 @@ const userNotifications = require('./routes/user/notifications');
 
 app.use(userNotifications);
 
-app.listen(8000);
+app.listen(config.post);
 
