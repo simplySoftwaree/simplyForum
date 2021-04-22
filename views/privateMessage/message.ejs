@@ -1,0 +1,34 @@
+<% layout('boilerplate/boiler') -%>
+
+<div class="container">
+    <div class="message">
+        <%if(error !== null){%>
+            <p class="input-error"><%= error%></p>
+        <%}%>
+        <div class="message-start">
+            <p class="message-nav"><a href="/">Home</a> > <a href="/messages">All Messages</a></p>
+            <h1 class="title"><%= msg.title%></h1>
+            <%let content = msg.content.replace("\n", "<br>");%>
+            <p class="content"><%= content%></p>
+        </div>
+        <p class="author">By: <a href="/user/<%- msg.author.id%>"><%= msg.author.username%></a>, on <%= msg.created.toDateString()%></p>
+        <%for (let i = startPoint; i < endPoint; i++) {%>
+            <hr>
+            <div class="message-comment">
+                <%let comment = msg.privateMessageComment[i].content.replace(/(?:\r\n|\r|\n)/g, '<br>');%>
+                <p id="<%- msg.privateMessageComment[i].id%>" class="content"><%- comment%></p>
+                <p class="author">By: <a href="/user/<%- msg.privateMessageComment[i].author.id%>"><%= msg.privateMessageComment[i].author.username%></a>, on <%= msg.privateMessageComment[i].created.toDateString()%></p>
+            </div>
+        <%};%>
+        <form action="/reply/<%- msg.id%>" method="POST">
+            <textarea name="content" class="input-box" placeholder="Write your reply"></textarea>
+            <button type="submit" class="btn-comment">Reply</button>
+        </form>
+        <%if(pageNumb > 1){%>
+            <a class="pageChange" href="/msg/<%-msg.id%>/<%-pageNumb - 1%>">Prev</a>
+        <%}%>
+        <%if(highestPageNumb > pageNumb){%>
+            <a class="pageChange" href="/msg/<%-msg.id%>/<%- nextPage%>">Next</a>
+        <%}%>
+    </div>
+</div>

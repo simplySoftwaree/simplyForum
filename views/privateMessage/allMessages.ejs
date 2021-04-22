@@ -1,0 +1,29 @@
+<% layout('boilerplate/boiler') -%>
+
+<div class="container">
+    <div class="privateMessages">
+        <p class="thread-nav"><a href="/">Home</a> > <a href="/messages">All Messages</a></p>
+        <h1 class="title">All Private Messages</h1>
+        <a class="btn-create" href="/message/create/">New Message</a>
+        <div class="allMessages">
+            <%let msg = user.privateMsg.reverse()%>
+            <%for (let i = startPoint; i < endPoint; i++) {%>
+                <div class="indMsg">
+                    <a href="/message/<%- msg[i].id%>/1"><%- msg[i].title %> %></a>
+                    <%if(user.id == msg[i].author.id){%>
+                        <p>Reciver: <a href="/user/<%- msg[i].reciver.id%>"><%- msg[i].reciver.username%></a>, <%- msg[i].created.toDateString()%></p>
+                    <%}else{%>
+                        <p>Sender: <a href="/user/<%- msg[i].author.id%>"><%- msg[i].author.username%></a>, <%- msg[i].created.toDateString()%></p>
+                    <%}%>
+                    <hr>
+                </div>
+            <%};%>
+        </div>
+        <%if(pageNumb > 1){%>
+            <a class="pageChange" href="/messages/<%-pageNumb - 1%>">Prev</a>
+        <%}%>
+        <%if(highestPageNumb > pageNumb){%>
+            <a class="pageChange" href="/messages/<%- nextPage%>">Next</a>
+        <%}%>
+    </div>
+</div>

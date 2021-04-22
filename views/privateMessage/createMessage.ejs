@@ -1,0 +1,17 @@
+<% layout('boilerplate/boiler') -%>
+<div class="container">
+    <div class="fieldContainer">
+        <p class="thread-nav"><a href="/">Home</a> > <a href="/messages">All Messages</a></p>
+        <h1 class="title">Create Message</h1>
+        <% if(error !== null){ %>
+            <p class="input-error"><%- error %></p>
+        <%}else{%>
+        <%}%>
+        <form action="/message/create"  method="POST">
+            <input type="text" name="title" class="input-title" placeholder="Message title">
+            <input type="text" name="username" class="input-title" placeholder="Recipent's Username">
+            <textarea name="content" class="input-box" placeholder="Write your message here..."></textarea>
+            <button type="submit" class="btn-create">Create Message</button>
+        </form>
+    </div>
+</div>
